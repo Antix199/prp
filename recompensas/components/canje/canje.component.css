@@ -1,0 +1,19 @@
+.contenedor {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.detalle-cupon, .resumen, .condiciones {
+  margin-top: 1.5rem;
+  border: 1px solid #bbb;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}

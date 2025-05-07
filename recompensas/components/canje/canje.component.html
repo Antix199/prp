@@ -1,0 +1,32 @@
+<div class="container" *ngIf="recompensa">
+  <h2><strong>Confirmación de Canje</strong></h2>
+
+  <div class="card">
+    <h4><strong>{{ recompensa.recNombre }}</strong></h4>
+    <p>{{ recompensa.recDescripcion }}</p>
+    <p><strong>Costo en puntos:</strong> {{ recompensa.recCostoPuntos }}</p>
+  </div>
+
+  <div class="card">
+    <h4><strong>Resumen del canje</strong></h4>
+    <p><strong>Puntos disponibles:</strong> {{ puntosDisponibles }}</p>
+    <p><strong>Costo recompensa:</strong> {{ recompensa.recCostoPuntos }}</p>
+    <p><strong>Puntos restantes:</strong> {{ puntosRestantes }}</p>
+
+    <button (click)="canjear()" [disabled]="puntosRestantes < 0">
+      Canjear recompensa
+    </button>
+  </div>
+
+  <div class="card">
+    <h4><strong>Términos y condiciones</strong></h4>
+    <ul>
+      <li>Una vez canjeada, la recompensa no puede ser devuelta o cambiada.</li>
+      <li>Límite de un cupón por compra.</li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="!recompensa">
+  <p>Cargando detalles de la recompensa...</p>
+</div>
